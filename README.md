@@ -3,44 +3,37 @@ Objective
 
 You are provided with a simple estimation app built using Django. Your task is to:
 
-    Fix Intentional Errors: There are over 5 intentional errors in the project. Find them and correct the code.
-    Enhance the Code: Improve the project in any way you see fit. There are no limits for enhancements, so feel free to optimize code, performance, or add additional features.
-    Authentication:
+Fix Intentional Errors:
+    There are over 5 intentional errors in the project. Find them and correct the code.
+Enhance the Code:
+    Improve the project in any way you see fit. There are no limits for enhancements, so feel free to optimize code, performance, or add additional features.
+Authentication:
         Add authentication to the project.
         Ensure that only superusers can access the provided APIs.
-    Write Unit Tests:
-        Write unit tests for the Create, Update, and Delete operations on the Estimate model using Django's test framework.
-    Optional: Writing comments in the code is optional, but it may help explain your thought process.
+Write Unit Tests:
+    Write unit tests for the Create, Update, and Delete operations on the Estimate model using Django's test framework.
+Optional:
+    Writing comments in the code is optional, but it may help explain your thought process.
 
 Project Setup
 
-    Clone the repository:
+Clone the repository:
 
-    bash
-
-git clone [https://github.com/Airdec/django-api-test](https://github.com/Airdec/django-api-test)
+    git clone [https://github.com/Airdec/django-api-test](https://github.com/Airdec/django-api-test)
 
 Install the dependencies:
 
-bash
-
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 Create migration Files:
 
-bash
-
-python manage.py makemigrations
+    python manage.py makemigrations
 
 Apply migrations:
 
-bash
-
-python manage.py migrate
+    python manage.py migrate
 
 Run the server:
-
-bash
 
     python manage.py runserver
 
