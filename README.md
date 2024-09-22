@@ -67,7 +67,7 @@ Task Details
 
 5. Submission:
 
-    You have a maximum of 3 days to complete the task.
+    You have a maximum of 3 days to complete the task. Submitting anytime sooner that the deadline, would be a point.
     Once done, submit your work in one of the following formats:
         As a .zip file containing your updated codebase.
         Alternatively, push your changes to a public repository and share the link.
