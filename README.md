@@ -1,80 +1,95 @@
-Django Task Assignment
-Objective
+# Django Estimation App
 
-You are provided with a simple estimation app built using Django. Your task is to:
+This project is a comprehensive estimation application built with Django, featuring three main apps: **Estimates**, **Management**, and **User**. The application provides a user-friendly interface for managing estimates and includes authentication, testing, and API documentation.
 
-Fix Intentional Errors:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Project Setup](#project-setup)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
 
-    There are over 5 intentional errors in the project. Find them and correct the code.
+## Introduction
 
-Enhance the Code:
+The Django Estimation App is designed to assist users in managing estimates effectively. It includes functionalities for creating, updating, and deleting estimates, along with user authentication to ensure secure access.
 
-    Improve the project in any way you see fit. There are no limits for enhancements, so feel free to optimize code, performance, or add additional features.
+## Features
+- **User Authentication**: Secure access with Django’s authentication system. Only superusers can create, update, or delete estimates.
+- **Estimate Management**: Manage estimates easily through dedicated APIs.
+- **API Documentation**: Swagger UI for easy reference of available API endpoints.
+- **Token Authentication**: Use token-based authentication for accessing protected resources.
+- **Testing**: Comprehensive unit tests for all critical operations.
 
-Authentication:
+## Project Setup
 
-    Add authentication to the project.
-    Ensure that only superusers can access the provided APIs.
+To set up the project on your local machine, follow these steps:  
+1. **Clone the Repository**:  
+   ```bash  
+   git clone https://github.com/shokooh-rigi/django-api-test.git  
+   cd django-api-test  
 
-Write Unit Tests:
+Install Dependencies: Ensure you have Python 3.8 or higher installed. Then install the required packages:
 
-    Write unit tests for the Create, Update, and Delete operations on the Estimate model using Django's test framework.
+      pip install -r requirements.txt  
 
-Optional:
+Create Database Migrations: Create the necessary database migrations by running:
 
-    Writing comments in the code is optional, but it may help explain your thought process.
+      python manage.py makemigrations  
 
-Project Setup
+Apply Migrations: Apply the migrations to set up the database schema:
 
-Clone the repository:
+      python manage.py migrate  
 
-    git clone [https://github.com/Airdec/django-api-test](https://github.com/Airdec/django-api-test)
+Run the Development Server: Start the development server with:
 
-Install the dependencies:
+    python manage.py runserver  
 
-    pip install -r requirements.txt
+    You can access the application at http://127.0.0.1:8000/.
 
-Create migration Files:
+###Usage
+###Apps Overview:
 
-    python manage.py makemigrations
+ ####Estimates: 
+Handle all operations related to estimates (Create, Update, Delete).
+ ####Management:
+Manage user-related functionalities and administrative tasks.
+ ####User:
+Manage user accounts and authentication.
 
-Apply migrations:
+###API Endpoints
 
-    python manage.py migrate
+Here are the available API endpoints for the application:
+Estimates
 
-Run the server:
+ Create Estimate:   POST /api/estimates/
+ Retrieve Estimates:   GET /api/estimates/
+ Update Estimate:   PUT /api/estimates/{id}/
+ Delete Estimate:   DELETE /api/estimates/{id}/
 
-    python manage.py runserver
+###Management
 
-Task Details
-1. Find and Fix Errors:
+Manage Users:
+Endpoints to create, update, or delete users. Ensure only superusers can access these.
 
-    The code has more than 5 intentional errors that were placed to evaluate your debugging skills. Identify and resolve them.
+###User
 
-2. Improvements:
+ User Registration:
+ POST /api/users/register/
+ User Login: POST /api/users/login/ - Returns a token for authentication.
 
-    You have full freedom to enhance the codebase in any way you see fit. This could involve improving the structure, optimizing performance, adding features, or anything else that improves the project.
+Make sure to include the necessary authentication headers (Bearer Token) when accessing protected endpoints.
+###Testing
 
-3. Add Authentication:
+To ensure the application is functioning as expected, you can run the unit tests included in the project:
 
-    Add Django’s authentication system to the project.
-    Ensure that only superusers can access the APIs for Create/Update/Delete operations.
+      python manage.py test  
 
-4. Write Tests:
+This will run tests for all apps, including the Estimates, Management, and User apps.
+API Documentation
 
-    Write test cases for the Create, Update, and Delete operations on the Estimate model.
-    You may use Django’s built-in test framework and ensure that the tests pass successfully.
-
-5. Submission:
-
-    You have a maximum of 3 days to complete the task. Submitting anytime sooner that the deadline, would be a point.
-    Once done, submit your work in one of the following formats:
-        As a .zip file containing your updated codebase.
-        Alternatively, push your changes to a public repository and share the link.
-
-How to Submit:
-
-    Option 1: Create a .zip file containing the entire project and send it via email.
-    Option 2: Push your changes to a new public repository and provide the link to it.
-
-Feel free to customize or modify any sections based on your preferences. Let me know if you need further adjustments!
+###The API is documented using:
+Swagger UI, which allows you to explore and interact with the available endpoints. You can access the documentation at: 
+http://127.0.0.1:8000/swagger/
